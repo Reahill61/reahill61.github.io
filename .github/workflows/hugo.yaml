@@ -48,6 +48,8 @@ jobs:
       - name: 设置Pages
         id: pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - name: 安装Node.js依赖
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: 使用Hugo构建
